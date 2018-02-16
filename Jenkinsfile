@@ -21,9 +21,7 @@ pipeline{
             stage('setupArtifactory') {
                 steps {
                     script {
-                        mavenSettingCallFunc {
-                            serverID = 'artifactory'
-                            credentialID = 'artifactory'
+                        def server = Artifactory.server artifactory
                         }
                     }
                 }
