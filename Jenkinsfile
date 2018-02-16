@@ -3,17 +3,13 @@ pipeline{
         tools {
         maven "maven-default"
         }
-        environment {
-        MAVEN_HOME = "${tool 'maven'}"
-        PATH ="${MAVEN_HOME}/bin:${PATH}"
-        }
         stages {
             stage('BuildStarted'){
                 steps{
                     echo 'STARTED'
                 }
             }
-            /*stage('CloneCode') {
+            stage('CloneCode') {
                 steps {
                     script {
 
@@ -31,7 +27,7 @@ pipeline{
                         }
                     }
                 }
-            }*/
+            }
             stage('Buildcode') {
                 steps {
                     script {
