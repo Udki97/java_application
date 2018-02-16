@@ -1,8 +1,9 @@
 pipeline{
         agent any
         tools {
-        maven "maven-default"
+        withMaven( 'maven-default')
         }
+        //withMaven(maven: 'apache Maven 3.3.9')
         stages {
             stage('BuildStarted'){
                 steps{
