@@ -26,7 +26,6 @@ pipeline{
                         }
                     }
                 }
-            }
             stage('Buildcode') {
                 steps {
                     script {
