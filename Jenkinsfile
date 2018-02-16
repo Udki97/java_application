@@ -22,6 +22,7 @@ pipeline{
                 steps {
                     script {
                         def server = Artifactory.server artifactory
+                        def credentials = Artifactory.credentials artifactory
                         }
                     }
                 }
