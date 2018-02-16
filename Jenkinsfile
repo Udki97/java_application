@@ -37,11 +37,11 @@ pipeline{
         }
         post{
             success{
-                notify 'SUCCESSFUL'
+                echo 'SUCCESSFUL'
             }
             failure{
 
-                notify 'FAILED'
+                echo 'FAILED'
 
             }
         }
