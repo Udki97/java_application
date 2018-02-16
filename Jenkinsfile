@@ -10,7 +10,7 @@ pipeline{
                 steps {
                     script {
 
-                        cleanWs()
+                        cleanWs notFailBuild: true
                         sh "git clone -b ${config.branch} ${config.repoUrl}"
 
                     }
