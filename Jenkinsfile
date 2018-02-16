@@ -10,13 +10,13 @@ pipeline{
                 steps {
                     script {
 
-                        cleanWs notFailBuild: true
+                        cleanWs()
                         sh "git clone -b ${config.branch} ${config.repoUrl}"
 
                     }
                 }
             }
-            stage('setupArtifactory') {
+            /*stage('setupArtifactory') {
                 steps {
                     script {
                         mavenSettingCallFunc {
@@ -25,7 +25,7 @@ pipeline{
                         }
                     }
                 }
-            }
+            }*/
             stage('Buildcode') {
                 steps {
                     script {
