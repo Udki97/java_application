@@ -28,7 +28,7 @@ pipeline{
             stage('Buildcode') {
                 steps {
                     script {
-                        sh "cd $path && mvn clean ${config.stage}"
+                        sh "cd $path && mvn clean install"
 
                     }
                 }
