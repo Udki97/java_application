@@ -6,7 +6,7 @@ pipeline{
                     echo 'STARTED'
                 }
             }
-            stage('CloneCode') {
+            /*stage('CloneCode') {
                 steps {
                     script {
 
@@ -15,7 +15,7 @@ pipeline{
                     }
                 }
             }
-            /*stage('setupArtifactory') {
+            stage('setupArtifactory') {
                 steps {
                     script {
                         mavenSettingCallFunc {
