@@ -3,7 +3,7 @@ pipeline{
         stages {
             stage('BuildStarted'){
                 steps{
-                    notify 'STARTED'
+                    echo 'STARTED'
                 }
             }
             stage('CloneCode') {
