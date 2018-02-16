@@ -16,16 +16,16 @@ pipeline{
                     }
                 }
             }
-            /*stage('setupnexus') {
+            stage('setupArtifactory') {
                 steps {
                     script {
                         mavenSettingCallFunc {
-                            serverID = 'nexus'
-                            credentialID = 'nexus'
+                            serverID = 'artifactory'
+                            credentialID = 'artifactory'
                         }
                     }
                 }
-            }*/
+            }
             stage('Buildcode') {
                 steps {
                     script {
@@ -48,4 +48,3 @@ pipeline{
 
     }
 }
-
