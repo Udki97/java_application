@@ -3,7 +3,7 @@ pipeline{
         tools {
         maven "maven-default"
         }
-        enironment {
+        environment {
         MAVEN_HOME = "${tool 'maven'}"
         PATH ="${MAVEN_HOME}/bin:${PATH}"
         }
