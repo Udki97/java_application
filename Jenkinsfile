@@ -3,6 +3,10 @@ pipeline{
         tools {
         maven "maven-default"
         }
+        enironment {
+        MAVEN_HOME = "${tool 'maven'}"
+        PATH ="${MAVEN_HOME}/bin:${PATH}"
+        }
         stages {
             stage('BuildStarted'){
                 steps{
