@@ -25,16 +25,5 @@ pipeline{
                     }
                 }
             }
-        post{
-            success{
-                notify 'SUCCESSFUL'
-            }
-            failure{
-
-                notify 'FAILED'
-
-            }
         }
-
-    }
 }
