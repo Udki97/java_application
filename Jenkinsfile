@@ -7,8 +7,6 @@ pipeline{
             MAVEN_HOME = "${tool 'maven-latest'}"
             PATH="${MAVEN_HOME}/bin:${PATH}"
         }*/
-        withEnv(['MAVEN_HOME = "${tool \'maven-latest\'}"', 'PATH="${MAVEN_HOME}/bin:${PATH}"']) {
-
         stages {
             stage('BuildStarted'){
                 steps{
@@ -25,7 +23,9 @@ pipeline{
             stage('Buildcode') {
                 steps {
                     script {
+                        withEnv(['MAVEN_HOME = "${tool \'maven-latest\'}"', 'PATH="${MAVEN_HOME}/bin:${PATH}"']) {
                         sh 'mvn clean install'
+                        }
                     }
                 }
             }
@@ -41,5 +41,4 @@ pipeline{
 
             }
         }
-    }
-}
+  }
