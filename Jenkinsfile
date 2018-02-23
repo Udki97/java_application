@@ -9,13 +9,6 @@ pipeline{
                     echo 'STARTED'
                 }
             }
-            stage('CloneCode') {
-                steps {
-                    script {
-                        checkout scm
-                    }
-                }
-            }
             stage('Buildcode') {
                 steps {
                     script {
