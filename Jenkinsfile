@@ -1,5 +1,5 @@
 pipeline{
-       agent any
+        agent any
          tools {
                 maven 'maven-latest'
                 jdk 'java-default'
@@ -30,6 +30,7 @@ pipeline{
                     }
                 }
             }
+        }
         post {
             success {
                 echo 'SUCCESSFUL'
@@ -40,5 +41,4 @@ pipeline{
 
             }
         }
-  }
 }
