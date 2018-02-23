@@ -29,9 +29,7 @@ pipeline{
                     }
                 }
             }
-            stage('Test')
-        }
-        post{
+            post{
             success{
                 echo 'SUCCESSFUL'
             }
