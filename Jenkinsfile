@@ -1,12 +1,8 @@
 pipeline{
-        agent any
-         tools {
+       agent any
+        tools {
                 maven 'maven-latest'
             }
-        /*environment {
-            MAVEN_HOME = "${tool 'maven-latest'}"
-            PATH="${MAVEN_HOME}/bin:${PATH}"
-        }*/
         stages {
             stage('BuildStarted'){
                 steps{
@@ -29,15 +25,16 @@ pipeline{
                     }
                 }
             }
-            post{
+        post{
             success{
-                echo 'SUCCESSFUL'
+                notify 'SUCCESSFUL'
             }
             failure{
 
-                echo 'FAILED'
+                notify 'FAILED'
 
             }
         }
-  }
+
+    }
 }
